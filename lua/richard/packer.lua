@@ -25,6 +25,20 @@ return require('packer').startup(function(use)
     use('mbbill/undotree') 
     use{ 'stevearc/dressing.nvim' }
     use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/cmp-buffer",
+	    "hrsh7th/cmp-path",
+	    "L3MON4D3/LuaSnip",
+	    "saadparwaiz1/cmp_luasnip",
+        }
+    }
+    use {
+        'tzachar/cmp-tabnine',
+        run = './install.sh',
+        requires = 'hrsh7th/nvim-cmp'
+    }
+    use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
 	  requires = {
